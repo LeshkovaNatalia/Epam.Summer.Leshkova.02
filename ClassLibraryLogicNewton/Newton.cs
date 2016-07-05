@@ -37,7 +37,7 @@ namespace ClassLibraryLogicNewton
         /// <summary>
         /// Method StartApproach find start value for Newton method
         /// </summary>
-        public static double StartApproach(int number, int degree)
+        private static double StartApproach(int number, int degree)
         {
             double approach = 1;
 
@@ -52,7 +52,7 @@ namespace ClassLibraryLogicNewton
         /// <summary>
         /// Method ResultFunction return value of function at a given point
         /// </summary>
-        public static double ResultFunction(int number, int degree, double approach)
+        private static double ResultFunction(int number, int degree, double approach)
         {
             return Math.Pow(approach, degree) - number;
         }

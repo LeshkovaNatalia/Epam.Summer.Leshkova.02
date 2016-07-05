@@ -237,12 +237,12 @@ namespace ClassLibraryLogicEuclid
         }
         #endregion
 
-        #region Helper method.
+        #region Helper method
         /// <summary>
         /// The method checks the validity of the data
         /// </summary>
         /// <returns>Return 0 if method complete checking </returns>
-        public static int CheckInputNumbers(ref int a, ref int b)
+        private static int CheckInputNumbers(ref int a, ref int b)
         {
             if (a == 0 && b == 0)
                 throw new ArgumentException();
