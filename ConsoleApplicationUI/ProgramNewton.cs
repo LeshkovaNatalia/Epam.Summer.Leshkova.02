@@ -24,6 +24,7 @@ namespace ConsoleApplicationUINewton
             {
                 Console.Write("Enter element {0} of array: ", i + 1);
                 isParsed = Double.TryParse(Console.ReadLine(), out array[i]);
+               
                 if (!isParsed)
                 {
                     Console.WriteLine("You enter not a number!");
@@ -33,7 +34,7 @@ namespace ConsoleApplicationUINewton
 
             if (isParsed)
             {
-                result = Newton.MethodNewton((int)array[0], array[1], array[2]);
+                result = Newton.MethodNewton((int)array[0], (int)array[1], array[2]);
                 Console.WriteLine();
                 Console.WriteLine("Test MethodNewton: root {0} degree of {1} -> {2}", array[1], array[0], result);
                 Console.WriteLine("Compare result Math.Pow: {0}", Math.Pow(result, array[1]));
