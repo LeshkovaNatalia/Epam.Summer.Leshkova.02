@@ -8,20 +8,25 @@ namespace ConsoleApplicationUIEuclid
         static void Main(string[] args)
         {
             #region Static Example
-            Console.WriteLine("Euclid -> (748,944)={0}", EuclidMethod(748, 944));
+            Console.WriteLine($"Euclid -> (748,944)={EuclidMethod(748, 944)}");
 
             double totalTime = 0;
-            Console.WriteLine("Euclid -> (748,944)={0}", EuclidMethod(748, 944, ref totalTime));
+            Console.WriteLine($"Euclid -> (748,944) = {EuclidMethod(748, 944, ref totalTime)}");
             Console.WriteLine("Total Milliseconds: " + totalTime);
 
-            Console.WriteLine("Euclid -> GCD of enter numbers is {0}", EuclidMethod(15,18,27,69));
+            
+            Console.WriteLine($"Euclid -> GCD(15, 18, 27, 69) = {EuclidMethod(15, 18, 27, 69)}");
 
             totalTime = 0;
-            Console.WriteLine("Stain -> (748,944)={0}", SteinMethod(748, 944, ref totalTime));
+            Console.WriteLine($"Euclid -> GCD(15, 18, 27, 69) = {EuclidMethod(ref totalTime, 15, 18, 27, 69)}");
+            Console.WriteLine("Total Milliseconds: " + totalTime);
+
+            totalTime = 0;
+            Console.WriteLine($"Stain -> (748,944) = {SteinMethod(748, 944, ref totalTime)}");
             Console.WriteLine("Total Milliseconds: " + totalTime);
             Console.WriteLine();
 
-            Console.WriteLine("Stain -> GCD of enter numbers is {0}", SteinMethod(15, 18, 27, 69));
+            Console.WriteLine($"Stain -> GCD(15, 18, 27, 69) = {SteinMethod(15, 18, 27, 69)}");
             Console.WriteLine();
             #endregion
 
@@ -45,7 +50,7 @@ namespace ConsoleApplicationUIEuclid
 
                     if (isParsed && i == N - 1)
                     {
-                        Console.WriteLine("GCD of enter numbers is {0}", SteinMethod(array));
+                        Console.WriteLine($"GCD of enter numbers is {SteinMethod(array)}");
                     }
                 }
             }
